@@ -90,7 +90,6 @@ import Location from './conferencemodule/Tabs/Location';
 import CommonTemplate from './conferencemodule/Tabs/CommonTemplate';
 import ConferencePage from './conferencemodule/Tabs/ConferencePage';
 
-
 import Template01 from './certificatemodule/pages/certificatetemplates/akleem';
 // import ViewCertificate from './certificatemodule/pages/participantCerti';
 import Template03 from './certificatemodule/pages/certificatetemplates/03_sarthak';
@@ -182,13 +181,11 @@ import DoctorDetailView from './diabeticsModule/pages/DoctorDetailView';
 import HospitalDetailView from './diabeticsModule/pages/HospitalDetailView';
 
 // import fileUpload
-import FileUpload from './fileUpload/fileUploads.jsx'
-import PaymentPortal from './conferencemodule/pages/PaymentPortal.jsx'
-
+import FileUpload from './fileUpload/fileUploads.jsx';
+import PaymentPortal from './conferencemodule/pages/PaymentPortal.jsx';
 
 //import machine learning modules
 import LinearRegression from './mlcoursemodule/linearregression.jsx';
-
 
 //import faculty rankings
 
@@ -238,45 +235,45 @@ function App() {
         </Route>
 
         {/* Original Routes */}
-<Route path="/tt/:generatedLink">
-  <Route index element={<Timetable />}></Route>
-  <Route path="addfaculty" element={<AddFaculty />} />
-  <Route path="importttdata" element={<ImportTT />} />
-  <Route path="addroom" element={<AddRoom />} />
-  <Route path="addcommonload" element={<CommonLoad />} />
-  <Route path="addlunchload" element={<LunchLoad />} />
-  <Route path="addsubjects" element={<Subjects />} />
-  <Route path="addsem" element={<AddSem />} />
-  <Route path="addnote" element={<Note />} />
-  <Route path="firstyearload" element={<FirstYearLoad />} />
-  <Route path="firstyearfaculty" element={<FirstYearFaculty />} />
-  <Route path="lockedsummary" element={<LockedSummary />} />
-  <Route path="generatepdf" element={<PrintSummary />} />
-  <Route path="loaddistribution" element={<LoadDistribution />} />
-  <Route path="roomallotment" element={<ViewAllotmentPage />} />
-  <Route path="editmasterfaculty" element={<EditMasterFaculty />} />
-  <Route path="facultyload" element={<FacultyDeptHourLoad />} />
-</Route>
+        <Route path="/tt/:generatedLink">
+          <Route index element={<Timetable />}></Route>
+          <Route path="addfaculty" element={<AddFaculty />} />
+          <Route path="importttdata" element={<ImportTT />} />
+          <Route path="addroom" element={<AddRoom />} />
+          <Route path="addcommonload" element={<CommonLoad />} />
+          <Route path="addlunchload" element={<LunchLoad />} />
+          <Route path="addsubjects" element={<Subjects />} />
+          <Route path="addsem" element={<AddSem />} />
+          <Route path="addnote" element={<Note />} />
+          <Route path="firstyearload" element={<FirstYearLoad />} />
+          <Route path="firstyearfaculty" element={<FirstYearFaculty />} />
+          <Route path="lockedsummary" element={<LockedSummary />} />
+          <Route path="generatepdf" element={<PrintSummary />} />
+          <Route path="loaddistribution" element={<LoadDistribution />} />
+          <Route path="roomallotment" element={<ViewAllotmentPage />} />
+          <Route path="editmasterfaculty" element={<EditMasterFaculty />} />
+          <Route path="facultyload" element={<FacultyDeptHourLoad />} />
+        </Route>
 
-{/* Backup Routes - v1 */}
-<Route path="/tt/v1/:generatedLink">
-  <Route index element={<Timetable2 />}></Route>
-  <Route path="addfaculty" element={<AddFaculty />} />
-  <Route path="importttdata" element={<ImportTT />} />
-  <Route path="addroom" element={<AddRoom />} />
-  <Route path="addcommonload" element={<CommonLoad />} />
-  <Route path="addlunchload" element={<LunchLoad />} />
-  <Route path="addsubjects" element={<Subjects />} />
-  <Route path="addsem" element={<AddSem />} />
-  <Route path="addnote" element={<Note />} />
-  <Route path="firstyearload" element={<FirstYearLoad />} />
-  <Route path="firstyearfaculty" element={<FirstYearFaculty />} />
-  <Route path="lockedsummary" element={<LockedSummary />} />
-  <Route path="generatepdf" element={<PrintSummary />} />
-  <Route path="loaddistribution" element={<LoadDistribution />} />
-  <Route path="roomallotment" element={<ViewAllotmentPage />} />
-  <Route path="editmasterfaculty" element={<EditMasterFaculty />} />
-</Route>
+        {/* Backup Routes - v1 */}
+        <Route path="/tt/v1/:generatedLink">
+          <Route index element={<Timetable2 />}></Route>
+          <Route path="addfaculty" element={<AddFaculty />} />
+          <Route path="importttdata" element={<ImportTT />} />
+          <Route path="addroom" element={<AddRoom />} />
+          <Route path="addcommonload" element={<CommonLoad />} />
+          <Route path="addlunchload" element={<LunchLoad />} />
+          <Route path="addsubjects" element={<Subjects />} />
+          <Route path="addsem" element={<AddSem />} />
+          <Route path="addnote" element={<Note />} />
+          <Route path="firstyearload" element={<FirstYearLoad />} />
+          <Route path="firstyearfaculty" element={<FirstYearFaculty />} />
+          <Route path="lockedsummary" element={<LockedSummary />} />
+          <Route path="generatepdf" element={<PrintSummary />} />
+          <Route path="loaddistribution" element={<LoadDistribution />} />
+          <Route path="roomallotment" element={<ViewAllotmentPage />} />
+          <Route path="editmasterfaculty" element={<EditMasterFaculty />} />
+        </Route>
         {/* Same link */}
         <Route path="classrooms" element={<ViewMRooms />} />
         {/* Same link */}
@@ -287,13 +284,19 @@ function App() {
 
         <Route path="/tt/admin" element={<AdminPage />} />
         <Route path="/tt/admin/adminview" element={<TimetableMasterView />} />
-        <Route path="/tt/admin/facultyload" element={<FacultyLoadCalculation />} />
-<Route path="tt/coe/facultyload" element={<FacultyLoadCOE/>}/>
+        <Route
+          path="/tt/admin/facultyload"
+          element={<FacultyLoadCalculation />}
+        />
+        <Route path="tt/coe/facultyload" element={<FacultyLoadCOE />} />
 
         {/* Same link */}
         <Route path="/timetable">
           <Route index element={<MasterView />} />
-          <Route path="faculty/:facultyname" element={<MasterView autofill />} />
+          <Route
+            path="faculty/:facultyname"
+            element={<MasterView autofill />}
+          />
         </Route>
         {/* Same link */}
 
@@ -316,7 +319,6 @@ function App() {
           element={<FacultyHourLoad />}
         />
 
-
         <Route path="/cm/addevent" element={<EventRegistration />} />
         <Route path="/cm/dashboard" element={<CMDashboard />} />
         <Route path="/cm/:eventid" element={<CertificateForm />} />
@@ -333,8 +335,7 @@ function App() {
           path="/cm/userimages/signatures/:userId"
           element={<UserSignatures />}
         />
-        <Route path="/payment-portal" element={<PaymentPortal/>} />
-
+        <Route path="/payment-portal" element={<PaymentPortal />} />
 
         {/* Review management routes*/}
         <Route path="/prm/login" element={<ReviewLogin />} />
@@ -588,14 +589,10 @@ function App() {
         <Route path="/dm/addDailyDosage" element={<DailyDosageForm />} />
         <Route path="/dm/addSickDay" element={<SickDayForm />} />
 
-
         <Route path="/ml/t1" element={<LinearRegression />} />
       </Routes>
       {/* <Footer/> */}
       {/* </div> */}
-
-
-
     </Router>
   );
 }
